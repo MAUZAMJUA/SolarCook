@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SolarCook - Mi Estufa</title>
+
+<link rel="stylesheet" href="mi-estufa.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>☀ SolarCook</h2>
+        </div>
+
+        <ul>
+            <li onclick="window.location.href='../Dashboard/dashboard.html'">
+                <i class="fas fa-home"></i>
+                Inicio
+            </li>
+
+            <li class="active" onclick="window.location.href='mi-estufa.html'">
+                <i class="fas fa-fire"></i>
+                Mi Estufa
+            </li>
+
+            <li onclick="window.location.href='../Reporte/reporte.html'">
+                <i class="fas fa-exclamation-triangle"></i>
+                Reportar Problema
+            </li>
+
+            <li onclick="window.location.href='../Solicitud/solicitud.html'">
+                <i class="fas fa-clipboard-list"></i>
+                Mis Solicitudes
+            </li>
+
+            <li onclick="window.location.href='../Perfil/perfil.html'">
+                <i class="fas fa-user"></i>
+                Mi Perfil
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="header">
+
+            <div>
+                <h1>Mi Estufa Solar</h1>
+                <p>Información general y estado actual.</p>
+            </div>
+
+            <button class="historial-btn">
+                Ver Historial Completo
+            </button>
+
+        </div>
+
+        <section class="hero">
+
+            <div class="image-card">
+
+                <i class="fas fa-sun"></i>
+
+                <h2>EST-001</h2>
+
+                <span class="estado">
+                    Operativa
+                </span>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info">
+
+                    <div>
+                        <strong>Tipo:</strong>
+                        Parabólica
+                    </div>
+
+                    <div>
+                        <strong>Ubicación:</strong>
+                        Canchas
+                    </div>
+
+                    <div>
+                        <strong>Instalación:</strong>
+                        12/12/2025
+                    </div>
+
+                    <div>
+                        <strong>Técnico:</strong>
+                        Mauricio Zamudio
+                    </div>
+
+                    <div>
+                        <strong>Último mantenimiento:</strong>
+                        15/04/2026
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="stats">
+
+            <div class="stat">
+                <i class="fas fa-bolt"></i>
+                <h3>95%</h3>
+                <p>Rendimiento</p>
+            </div>
+
+            <div class="stat">
+                <i class="fas fa-tools"></i>
+                <h3>5</h3>
+                <p>Mantenimientos</p>
+            </div>
+
+            <div class="stat">
+                <i class="fas fa-calendar"></i>
+                <h3>15 Ago</h3>
+                <p>Próxima Revisión</p>
+            </div>
+
+            <div class="stat">
+                <i class="fas fa-check-circle"></i>
+                <h3>Activa</h3>
+                <p>Estado</p>
+            </div>
+
+        </section>
+
+        <section class="timeline">
+
+            <h2>Actividad Reciente</h2>
+
+            <div class="evento">
+                <div class="fecha">15/04/2026</div>
+                <div class="detalle">
+                    Inspección preventiva realizada.
+                </div>
+            </div>
+
+            <div class="evento">
+                <div class="fecha">03/02/2026</div>
+                <div class="detalle">
+                    Limpieza de reflectores.
+                </div>
+            </div>
+
+            <div class="evento">
+                <div class="fecha">12/12/2025</div>
+                <div class="detalle">
+                    Instalación inicial de la estufa.
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
