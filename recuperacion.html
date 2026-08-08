@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarCook - Recuperar Contraseña</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h1>SolarCook</h1>
+            <p>
+                Recupera el acceso a tu cuenta de forma rápida y segura.
+            </p>
+        </div>
+
+        <div class="right-panel">
+            <img class="brand-logo" src="logo.svg" alt="SolarCook logo">
+            <div class="password-recovery-form">
+                <h2>Recuperar Contraseña</h2>
+                <p>Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.</p>
+
+                <form id="recoveryForm" onsubmit="event.preventDefault(); enviarRecuperacion();">
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="recoveryEmail" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <button type="submit">Enviar enlace</button>
+                </form>
+
+                <div class="form-footer">
+                    <a class="forgot-password" href="index.html">Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enviarRecuperacion() {
+            const email = document.getElementById('recoveryEmail').value.trim();
+            if (!email) {
+                alert('Ingresa tu correo electrónico.');
+                return;
+            }
+            alert('Si el correo existe, recibirás instrucciones para restablecer tu contraseña.');
+        }
+    </script>
+</body>
+
+</html>
