@@ -26,6 +26,13 @@ body {
     padding: 40px;
 }
 
+.brand-logo {
+    width: min(220px, 40%);
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
 .left-panel h1 {
     font-size: 4rem;
     margin-bottom: 20px;
@@ -40,8 +47,12 @@ body {
 .right-panel {
     width: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 24px;
+    background: white;
+    padding: 40px;
 }
 
 .login-form {

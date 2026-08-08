@@ -1,238 +1,233 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SolarCook - Mis Solicitudes</title>
+    <title>SolarCook - Mis Solicitudes</title>
 
-<link rel="stylesheet" href="solicitud.css">
+    <link rel="stylesheet" href="solicitud.css">
+    <link rel="stylesheet" href="../../responsive.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <!-- SIDEBAR -->
+        <!-- SIDEBAR -->
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <div class="logo">
-            <h2>☀ SolarCook</h2>
-        </div>
-
-        <ul>
-
-            <li onclick="window.location.href='../Dashboard/dashboard.html'">
-                <i class="fas fa-home"></i>
-                Inicio
-            </li>
-
-            <li onclick="window.location.href='../MiEstufa/mi-estufa.html'">
-                <i class="fas fa-fire"></i>
-                Mi Estufa
-            </li>
-
-            <li onclick="window.location.href='../Reporte/reporte.html'">
-                <i class="fas fa-exclamation-triangle"></i>
-                Reportar Problema
-            </li>
-
-            <li class="active" onclick="window.location.href='solicitud.html'">
-                <i class="fas fa-clipboard-list"></i>
-                Mis Solicitudes
-            </li>
-
-            <li onclick="window.location.href='../Perfil/perfil.html'">
-                <i class="fas fa-user"></i>
-                Mi Perfil
-            </li>
-
-        </ul>
-
-    </aside>
-
-    <!-- CONTENIDO -->
-
-    <main class="content">
-
-        <div class="header">
-
-            <h1>Mis Solicitudes</h1>
-
-            <p>
-                Consulta el estado de tus reportes y solicitudes.
-            </p>
-
-        </div>
-
-        <!-- RESUMEN -->
-
-        <section class="stats">
-
-            <div class="stat">
-                <i class="fas fa-file-alt"></i>
-                <h2>12</h2>
-                <p>Total</p>
+            <div class="logo">
+                <h2>☀ SolarCook</h2>
             </div>
 
-            <div class="stat">
-                <i class="fas fa-clock"></i>
-                <h2>3</h2>
-                <p>Pendientes</p>
+            <ul>
+
+                <li onclick="window.location.href='../Dashboard/dashboard.html'">
+                    <i class="fas fa-home"></i> Inicio
+                </li>
+
+                <li onclick="window.location.href='../MiEstufa/mi-estufa.html'">
+                    <i class="fas fa-fire"></i> Mi Estufa
+                </li>
+
+                <li onclick="window.location.href='../Reporte/reporte.html'">
+                    <i class="fas fa-exclamation-triangle"></i> Reportar Problema
+                </li>
+
+                <li class="active" onclick="window.location.href='solicitud.html'">
+                    <i class="fas fa-clipboard-list"></i> Mis Solicitudes
+                </li>
+
+                <li onclick="window.location.href='../Perfil/perfil.html'">
+                    <i class="fas fa-user"></i> Mi Perfil
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+
+        <main class="content">
+
+            <div class="header">
+
+                <h1>Mis Solicitudes</h1>
+
+                <p>
+                    Consulta el estado de tus reportes y solicitudes.
+                </p>
+
             </div>
 
-            <div class="stat">
-                <i class="fas fa-check-circle"></i>
-                <h2>9</h2>
-                <p>Completadas</p>
-            </div>
+            <!-- RESUMEN -->
 
-        </section>
+            <section class="stats">
 
-        <!-- FILTROS -->
+                <div class="stat">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>12</h2>
+                    <p>Total</p>
+                </div>
 
-        <section class="filtros">
+                <div class="stat">
+                    <i class="fas fa-clock"></i>
+                    <h2>3</h2>
+                    <p>Pendientes</p>
+                </div>
 
-            <input
-            type="text"
-            placeholder="Buscar por folio...">
+                <div class="stat">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>9</h2>
+                    <p>Completadas</p>
+                </div>
 
-            <select>
+            </section>
+
+            <!-- FILTROS -->
+
+            <section class="filtros">
+
+                <input type="text" placeholder="Buscar por folio...">
+
+                <select>
                 <option>Todos los estados</option>
                 <option>Pendiente</option>
                 <option>En Proceso</option>
                 <option>Completado</option>
             </select>
 
-        </section>
+            </section>
 
-        <!-- SOLICITUDES -->
+            <!-- SOLICITUDES -->
 
-        <section class="solicitudes">
+            <section class="solicitudes">
 
-            <div class="ticket">
+                <div class="ticket">
 
-                <div class="ticket-top">
+                    <div class="ticket-top">
 
-                    <h3>MT-012</h3>
+                        <h3>MT-012</h3>
 
-                    <span class="pendiente">
+                        <span class="pendiente">
                         Pendiente
                     </span>
 
-                </div>
+                    </div>
 
-                <p>
-                    Problema de calentamiento insuficiente.
-                </p>
+                    <p>
+                        Problema de calentamiento insuficiente.
+                    </p>
 
-                <small>
+                    <small>
                     02/08/2026
                 </small>
 
-                <div class="progreso">
+                    <div class="progreso">
 
-                    <div class="activo">
-                        Pendiente
-                    </div>
+                        <div class="activo">
+                            Pendiente
+                        </div>
 
-                    <div>
-                        En Proceso
-                    </div>
+                        <div>
+                            En Proceso
+                        </div>
 
-                    <div>
-                        Completado
+                        <div>
+                            Completado
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <div class="ticket">
 
-            <div class="ticket">
+                    <div class="ticket-top">
 
-                <div class="ticket-top">
+                        <h3>MT-011</h3>
 
-                    <h3>MT-011</h3>
-
-                    <span class="proceso">
+                        <span class="proceso">
                         En Proceso
                     </span>
 
-                </div>
+                    </div>
 
-                <p>
-                    Reflectores dañados.
-                </p>
+                    <p>
+                        Reflectores dañados.
+                    </p>
 
-                <small>
+                    <small>
                     25/07/2026
                 </small>
 
-                <div class="progreso">
+                    <div class="progreso">
 
-                    <div class="activo">
-                        Pendiente
-                    </div>
+                        <div class="activo">
+                            Pendiente
+                        </div>
 
-                    <div class="activo">
-                        En Proceso
-                    </div>
+                        <div class="activo">
+                            En Proceso
+                        </div>
 
-                    <div>
-                        Completado
+                        <div>
+                            Completado
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <div class="ticket">
 
-            <div class="ticket">
+                    <div class="ticket-top">
 
-                <div class="ticket-top">
+                        <h3>MT-010</h3>
 
-                    <h3>MT-010</h3>
-
-                    <span class="completado">
+                        <span class="completado">
                         Completado
                     </span>
 
-                </div>
+                    </div>
 
-                <p>
-                    Limpieza y mantenimiento preventivo.
-                </p>
+                    <p>
+                        Limpieza y mantenimiento preventivo.
+                    </p>
 
-                <small>
+                    <small>
                     10/07/2026
                 </small>
 
-                <div class="progreso">
+                    <div class="progreso">
 
-                    <div class="activo">
-                        Pendiente
-                    </div>
+                        <div class="activo">
+                            Pendiente
+                        </div>
 
-                    <div class="activo">
-                        En Proceso
-                    </div>
+                        <div class="activo">
+                            En Proceso
+                        </div>
 
-                    <div class="activo">
-                        Completado
+                        <div class="activo">
+                            Completado
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+            </section>
 
-        </section>
+        </main>
 
-    </main>
-
-</div>
+    </div>
 
 </body>
+
 </html>

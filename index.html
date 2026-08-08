@@ -7,6 +7,7 @@
     <title>SolarCook - Inicio de Sesión</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -22,8 +23,8 @@
         </div>
 
         <div class="right-panel">
-
-            <form class="login-form">
+            <img class="brand-logo" src="logo.svg" alt="SolarCook logo">
+            <form class="login-form" id="loginForm" onsubmit="event.preventDefault(); iniciarSesion();">
 
                 <h2>Iniciar Sesión</h2>
 
@@ -31,11 +32,7 @@
 
                     <label>Correo Electrónico</label>
 
-                    <input
-                        type="email"
-                        id="correo"
-                        placeholder="ejemplo@correo.com"
-                        required>
+                    <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
 
                 </div>
 
@@ -43,17 +40,11 @@
 
                     <label>Contraseña</label>
 
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="********"
-                        required>
+                    <input type="password" id="password" placeholder="********" required>
 
                 </div>
 
-                <button
-                    type="button"
-                    onclick="iniciarSesion()">
+                <button type="submit">
 
                     Ingresar
 
@@ -67,91 +58,14 @@
 
     <script type="module">
 
-        import { initializeApp }
-        from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
-
-        import {
-            getAuth,
-            signInWithEmailAndPassword
-        }
-        from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
-
-        const firebaseConfig = {
-
-            apiKey: "AIzaSyAExiShvE2KO722ggLBcb5HVAwrZYwenSQ",
-
-            authDomain: "solarcook.firebaseapp.com",
-
-            projectId: "solarcook",
-
-            storageBucket: "solarcook.firebasestorage.app",
-
-            messagingSenderId: "746070858681",
-
-            appId: "1:746070858681:web:5b71484d7bace99c3f3468",
-
-            measurementId: "G-BR1K2861JP"
-
-        };
-
-        const app = initializeApp(firebaseConfig);
-
-        const auth = getAuth(app);
-
-        window.iniciarSesion = async function () {
-
-            const correo =
-                document.getElementById("correo").value;
-
-            const password =
-                document.getElementById("password").value;
-
-            try {
-
-                await signInWithEmailAndPassword(
-                    auth,
-                    correo,
-                    password
-                );
-
-                if (correo.endsWith("@solarcook.com")) {
-
-                    window.location.href =
-                        "ADMIN/Dashboard/dashboard.html";
-
-                } else {
-
-                    window.location.href =
-                        "USER/Dashboard/dashboard.html";
-
-                }
-
-            } catch (error) {
-
-                console.error(error);
-
-                switch (error.code) {
-
-                    case "auth/user-not-found":
-                        alert("Usuario no encontrado");
-                        break;
-
-                    case "auth/wrong-password":
-                        alert("Contraseña incorrecta");
-                        break;
-
-                    case "auth/invalid-credential":
-                        alert("Correo o contraseña incorrectos");
-                        break;
-
-                    default:
-                        alert("Error al iniciar sesión");
-                        break;
-                }
-
-            }
-
-        };
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js"; import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js"; const firebaseConfig = { apiKey: "AIzaSyAExiShvE2KO722ggLBcb5HVAwrZYwenSQ",
+        authDomain: "solarcook.firebaseapp.com", projectId: "solarcook", storageBucket: "solarcook.firebasestorage.app", messagingSenderId: "746070858681", appId: "1:746070858681:web:5b71484d7bace99c3f3468", measurementId: "G-BR1K2861JP" }; const app
+        = initializeApp(firebaseConfig); const auth = getAuth(app); const DEMO_USERS = { "admin@solarcook.com": { password: "admin123", role: "ADMIN" }, "usuario@solarcook.com": { password: "usuario123", role: "USER" } }; function redirectByRole(role)
+        { if (role === "ADMIN") { window.location.href = "ADMIN/Dashboard/dashboard.html"; } else { window.location.href = "USER/Dashboard/dashboard.html"; } } window.iniciarSesion = async function () { const correo = document.getElementById("correo").value.trim();
+        const password = document.getElementById("password").value; if (!correo || !password) { alert("Completa correo y contraseña"); return; } const demoUser = DEMO_USERS[correo.toLowerCase()]; if (demoUser && demoUser.password === password) { localStorage.setItem("solarcookUser",
+        JSON.stringify({ email: correo, role: demoUser.role })); redirectByRole(demoUser.role); return; } try { await signInWithEmailAndPassword(auth, correo, password); redirectByRole(correo.endsWith("@solarcook.com") ? "ADMIN" : "USER"); } catch (error)
+        { console.error(error); switch (error.code) { case "auth/user-not-found": alert("Usuario no encontrado"); break; case "auth/wrong-password": alert("Contraseña incorrecta"); break; case "auth/invalid-credential": alert("Correo o contraseña incorrectos");
+        break; case "auth/network-request-failed": alert("No se pudo conectar con Firebase. Usa admin@solarcook.com / admin123 o usuario@solarcook.com / usuario123 para probar."); break; default: alert("Error al iniciar sesión"); break; } } };
 
     </script>
 
