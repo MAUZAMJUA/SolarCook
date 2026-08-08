@@ -59,8 +59,12 @@ body {
 }
 
 .btn-nuevo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background: #ff9800;
     color: white;
+    text-decoration: none;
     border: none;
     padding: 12px 20px;
     border-radius: 10px;

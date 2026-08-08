@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SolarCook - Historial de Mi Estufa</title>
+
+    <link rel="stylesheet" href="historial-estufa.css">
+    <link rel="stylesheet" href="../../responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>☀ SolarCook</h2>
+            </div>
+
+            <ul>
+                <li onclick="window.location.href='../Dashboard/dashboard.html'">
+                    <i class="fas fa-home"></i> Inicio
+                </li>
+
+                <li class="active" onclick="window.location.href='mi-estufa.html'">
+                    <i class="fas fa-fire"></i> Mi Estufa
+                </li>
+
+                <li onclick="window.location.href='../Reporte/reporte.html'">
+                    <i class="fas fa-exclamation-triangle"></i> Reportar Problema
+                </li>
+
+                <li onclick="window.location.href='../Solicitud/solicitud.html'">
+                    <i class="fas fa-clipboard-list"></i> Mis Solicitudes
+                </li>
+
+                <li onclick="window.location.href='../Perfil/perfil.html'">
+                    <i class="fas fa-user"></i> Mi Perfil
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="content">
+
+            <div class="header">
+
+                <div>
+                    <h1>Historial Completo de Mi Estufa</h1>
+                    <p>Revisa todo el historial de mantenimiento, cambios y eventos de tu estufa solar.</p>
+                </div>
+
+                <a href="mi-estufa.html" class="volver-btn">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </a>
+
+            </div>
+
+            <section class="summary-cards">
+
+                <div class="summary-card">
+                    <h3>16</h3>
+                    <p>Eventos registrados</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>5</h3>
+                    <p>Mantenimientos</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>3</h3>
+                    <p>Inspecciones</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>1</h3>
+                    <p>Revisión urgente</p>
+                </div>
+
+            </section>
+
+            <section class="history-table">
+
+                <div class="table-header">
+                    <h2>Registro de Actividades</h2>
+                    <a href="#" class="export-btn"><i class="fas fa-download"></i> Exportar PDF</a>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Evento</th>
+                                <th>Responsable</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15/04/2026</td>
+                                <td>Inspección preventiva</td>
+                                <td>Mauricio Zamudio</td>
+                                <td><span class="estado activo">Completado</span></td>
+                            </tr>
+                            <tr>
+                                <td>03/02/2026</td>
+                                <td>Limpieza de reflectores</td>
+                                <td>Natalia Díaz</td>
+                                <td><span class="estado completado">Completado</span></td>
+                            </tr>
+                            <tr>
+                                <td>28/01/2026</td>
+                                <td>Revisión de paneles</td>
+                                <td>Cesar Medina</td>
+                                <td><span class="estado pendiente">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td>12/12/2025</td>
+                                <td>Instalación inicial</td>
+                                <td>SolarCook Team</td>
+                                <td><span class="estado completado">Completado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
