@@ -70,12 +70,20 @@ body {
 /* Botón */
 
 .btn-nueva {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background: #ff9800;
     color: white;
     border: none;
     padding: 12px 18px;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-nueva:hover {
+    opacity: .95;
 }
 
 

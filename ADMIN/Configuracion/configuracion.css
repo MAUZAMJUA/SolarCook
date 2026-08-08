@@ -117,6 +117,7 @@ body {
 .botones {
     margin-top: 30px;
     display: flex;
+    justify-content: flex-end;
     gap: 15px;
 }
 
@@ -130,9 +131,32 @@ body {
     color: white;
 }
 
-.botones button {
+.cerrar-sesion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
     border: none;
     padding: 14px 22px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.botones button,
+.botones a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.botones button i,
+.botones a i {
+    margin-right: 8px;
 }
