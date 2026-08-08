@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarCook - Registro de Estufa</title>
+    <link rel="stylesheet" href="registro-estufa.css">
+    <link rel="stylesheet" href="../../responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>☀ SolarCook</h2>
+
+            <ul>
+                <li><a href="../Dashboard/dashboard.html" style="color: inherit; text-decoration: none; display: block;"><i class="fas fa-home"></i> Inicio</a></li>
+                <li class="active"><a href="../Catalogo/listado-estufas.html" style="color: inherit; text-decoration: none; display: block;"><i class="fas fa-fire"></i> Estufas</a></li>
+                <li><a href="../Usuarios/usuarios.html" style="color: inherit; text-decoration: none; display: block;"><i class="fas fa-users"></i> Usuarios</a></li>
+                <li><a href="../Mantenimiento/mantenimiento.html" style="color: inherit; text-decoration: none; display: block;"><i class="fas fa-tools"></i> Mantenimiento</a></li>
+                <li><a href="../Reporte/reportes.html" style="color: inherit; text-decoration: none; display: block;"><i class="fas fa-chart-bar"></i> Reportes</a></li>
+                <li><a href="../Configuracion/configuracion.html" style="color: inherit; text-decoration: none; display: block;"><i class="fas fa-cog"></i> Configuración</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <div class="header">
+                <h1>Registro de Estufa Solar</h1>
+                <p>Captura la información general de una nueva estufa.</p>
+            </div>
+
+            <form class="formulario">
+
+                <div class="campo">
+                    <label>ID de Estufa</label>
+                    <input type="text" placeholder="EST-001">
+                </div>
+
+                <div class="campo">
+                    <label>Responsable</label>
+                    <input type="text" placeholder="Nombre del responsable">
+                </div>
+
+                <div class="campo">
+                    <label>Fecha de Instalación</label>
+                    <input type="date">
+                </div>
+
+                <div class="campo">
+                    <label>Tipo de Estufa</label>
+                    <select>
+                    <option>Seleccionar</option>
+                    <option>Parabólica</option>
+                    <option>Caja Solar</option>
+                    <option>Panel Solar</option>
+                </select>
+                </div>
+
+                <div class="campo">
+                    <label>Estado</label>
+                    <select>
+                    <option>Seleccionar</option>
+                    <option>Operativa</option>
+                    <option>En Mantenimiento</option>
+                    <option>Fuera de Servicio</option>
+                </select>
+                </div>
+
+                <div class="campo campo-completo">
+                    <label>Ubicación</label>
+                    <input type="text" placeholder="Lugar de la institución">
+                </div>
+
+                <div class="campo campo-completo">
+                    <label>Observaciones</label>
+                    <textarea rows="5" placeholder="Información adicional sobre la estufa..."></textarea>
+                </div>
+
+                <div class="botones">
+                    <button type="button" class="guardar">
+                    <i class="fas fa-save"></i> Guardar
+                </button>
+
+                    <button type="reset" class="limpiar">
+                    <i class="fas fa-eraser"></i> Limpiar
+                </button>
+                </div>
+
+            </form>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

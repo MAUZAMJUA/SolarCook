@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SolarCook - Reportar Problema</title>
+
+    <link rel="stylesheet" href="reporte.css">
+    <link rel="stylesheet" href="../../responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <h2>☀ SolarCook</h2>
+            </div>
+
+            <ul>
+
+                <li onclick="window.location.href='../Dashboard/dashboard.html'">
+                    <i class="fas fa-home"></i> Inicio
+                </li>
+
+                <li onclick="window.location.href='../MiEstufa/mi-estufa.html'">
+                    <i class="fas fa-fire"></i> Mi Estufa
+                </li>
+
+                <li class="active" onclick="window.location.href='reporte.html'">
+                    <i class="fas fa-exclamation-triangle"></i> Reportar Problema
+                </li>
+
+                <li onclick="window.location.href='../Solicitud/solicitud.html'">
+                    <i class="fas fa-clipboard-list"></i> Mis Solicitudes
+                </li>
+
+                <li onclick="window.location.href='../Perfil/perfil.html'">
+                    <i class="fas fa-user"></i> Mi Perfil
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+
+        <main class="content">
+
+            <div class="header">
+
+                <h1>Reportar Problema</h1>
+
+                <p>
+                    Genera una solicitud de soporte para tu estufa solar.
+                </p>
+
+            </div>
+
+            <!-- ESTUFA -->
+
+            <section class="estufa-card">
+
+                <div>
+                    <h3>Estufa Asignada</h3>
+                    <p>ID: EST-001</p>
+                    <p>Ubicación: Olimpo</p>
+                </div>
+
+                <span class="estado">
+                Operativa
+            </span>
+
+            </section>
+
+            <!-- CATEGORÍAS -->
+
+            <h2 class="titulo-seccion">
+                Tipo de Problema
+            </h2>
+
+            <section class="categorias">
+
+                <div class="categoria">
+                    <i class="fas fa-fire"></i>
+                    <span>Calentamiento</span>
+                </div>
+
+                <div class="categoria">
+                    <i class="fas fa-sun"></i>
+                    <span>Reflectores</span>
+                </div>
+
+                <div class="categoria">
+                    <i class="fas fa-cogs"></i>
+                    <span>Estructura</span>
+                </div>
+
+                <div class="categoria">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Otro</span>
+                </div>
+
+            </section>
+
+            <!-- FORMULARIO -->
+
+            <section class="formulario-card">
+
+                <div class="campo">
+
+                    <label>Título del Problema</label>
+
+                    <input type="text" placeholder="Describe brevemente el problema">
+
+                </div>
+
+                <div class="campo">
+
+                    <label>Prioridad</label>
+
+                    <select>
+
+                    <option>Baja</option>
+                    <option>Media</option>
+                    <option>Alta</option>
+
+                </select>
+
+                </div>
+
+                <div class="campo completo">
+
+                    <label>Descripción</label>
+
+                    <textarea rows="6" placeholder="Describe detalladamente la situación..."></textarea>
+
+                </div>
+
+                <!-- EVIDENCIA -->
+
+                <div class="campo completo">
+
+                    <label>Evidencia Fotográfica</label>
+
+                    <div class="upload-box">
+
+                        <i class="fas fa-camera"></i>
+
+                        <p>
+                            Seleccionar Fotografía
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="botones">
+
+                    <button class="enviar" onclick="window.location.href='../Solicitud/solicitud.html'">
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    Enviar Reporte
+
+                </button>
+
+                    <button class="limpiar">
+
+                    <i class="fas fa-eraser"></i>
+
+                    Limpiar
+
+                </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
